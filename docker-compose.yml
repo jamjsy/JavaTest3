@@ -1,0 +1,25 @@
+version: "3"
+services:
+  java:
+    container_name: test-0
+    image: registry.saas.hand-china.com/hap-cloud/base
+    values:
+    ports: 
+      - "8080:80"
+
+
+  mysql:
+    container_name: test-1
+    image: registry.saas.hand-china.com/tools/mysql：5.6
+    ports:
+      - "3306;3306"
+      
+    environment:
+
+    - MYSQL_IP：192.168.99.100
+    - MYSQL_ :3306
+    - MYSQL_NAME:sakila
+    - MYSQL_USER:root
+    - MYSQL_ROOT_PASSWORD:root
+
+
