@@ -1,8 +1,9 @@
-FROM registry.saas.hand-china.com/tools/mysql:5.6
+FROM registry.saas.hand-china.com/tools/mysql:5.6  
 
-COPY JavaTest3/sakila-db/sakila-data.sql
+ADD  sakila-data.sql sakila-data.sql 
 
-COPY JavaTest3/sakila-db/sakila-schema.sql
+ADD sakila-schema.sql sakila-schema.sql
 
-RUN java -jar Exam1/target/Exam1.jar
-    java -jar Exam2/target/Exam2.jar
+COPY  setup.sh   /docker-entrypoint-initdb.d/
+
+RUN chmod a+x /docker-entrypoint-initdb.d/setup.sh

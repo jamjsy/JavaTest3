@@ -1,9 +1,5 @@
-将我的文件克隆下来
+先克隆项目
 
-进入该项目文件夹，打开git bash
+使用docker-compose-start.sh启动数据库和jdk
 
-然后执行sh.build.sh 
-
-然后执行sh .run.sh
-
-dockerfile和dockercompose配置正在研究中
+sh run.sh就可以运行程序，显示运行结果

@@ -1,9 +1,9 @@
-FROM registry.saas.hand-china.com/hap-cloud/base:latest
+From registry.saas.hand-china.com/hap-cloud/base:latest 
 
-ADD Exam1/target/Exam1.jar
+ADD Exam1.jar Exam1.jar
 
-ADD Exam2/target/Exam2.jar
+ADD Exam2.jar Exam2.jar
 
-RUN java -jar Exam1/target/Exam1.jar
+CMD java -jar  Exam1.jar  $MYSQL_IP  $MYSQL_PORT  $MYSQL_DATABASES  $MYSQL_USER  $MYSQL_ROOT_PASSWORD  $CountryID  $CustomerID 
 
-    java -jar Exam1/target/Exam1.jar
+CMD java -jar  Exam2.jar  $MYSQL_IP  $MYSQL_PORT  $MYSQL_DATABASES  $MYSQL_USER  $MYSQL_ROOT_PASSWORD  $CountryID  $CustomerID 
